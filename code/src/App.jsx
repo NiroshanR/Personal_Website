@@ -1,3 +1,4 @@
+import React from "react";
 import "./styles/modern-normalize.css";
 import "./styles/App.css";
 import "./styles/components/header.css";
@@ -19,9 +20,19 @@ import project1_photo from "./assets/Portfolio.png";
 import project2_photo from ".//assets/Rock.jpg";
 import project3_photo from "./assets/Niro's_mart.png";
 import project4_photo from "./assets/Super_app.png";
+import { useEffect } from "react";
+
+// mobileNav();
 
 function App() {
-  mobileNav();
+  useEffect(() => {
+    
+    // Call the mobileNav function
+    mobileNav(); 
+
+    
+
+}, []);
   return (
     
     <div className="App">
@@ -50,16 +61,16 @@ function App() {
               </a>
             </li>
           </ul>
-          <button className="header__bars">
+          <button aria-label="mobile nav button" className="header__bars">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </button>
@@ -261,15 +272,15 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="contact" class="contact container section">
-          <h2 class="contact__title">Get In Contact</h2>
-          <p class="contact__description">
+        <section id="contact" className="contact container section">
+          <h2 className="contact__title">Get In Contact</h2>
+          <p className="contact__description">
             Whether you are hiring or have any enquiries or just want to say hi,
             my inbox is all open for you. Feel to reach me out and I will get
             back to as fast as i can.
           </p>
           <a
-            class="contact__btn btn"
+            className="contact__btn btn"
             href="mailto:niroshanr0109@gmail.com"
             target="_blank"
           >
@@ -277,11 +288,12 @@ function App() {
           </a>
         </section>
       </main>
-      <footer class="footer container section">
-        <h3 class="footer__title">Made with ❤️ by Niroshan Ragulesan</h3>
+      <footer className="footer container section">
+        <h3 className="footer__title">Made with ❤️ by Niroshan Ragulesan</h3>
       </footer>
     </div>
   );
+
 }
 
 export default App;

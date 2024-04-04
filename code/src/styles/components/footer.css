@@ -3,7 +3,7 @@
     font-weight: 400;
     color: var(--clr-slate600);
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.2em;
     user-select: none;
   }

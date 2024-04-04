@@ -1,12 +1,13 @@
 const mobileNav = () => {
-    const headerBtn = document.querySelector('.header__bars');
+    const headerBar = document.querySelector('.header__bars');
     const mobileNav = document.querySelector('.mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-nav__link');
   
     // State
     let isMobileNavOpen = false;
+    // console.log(isMobileNavOpen)
   
-    headerBtn.addEventListener('click', () => {
+    headerBar.addEventListener('click', () => {
       isMobileNavOpen = !isMobileNavOpen;
       if (isMobileNavOpen) {
         mobileNav.style.display = 'flex';
@@ -15,6 +16,7 @@ const mobileNav = () => {
         mobileNav.style.display = 'none';
         document.body.style.overflowY = 'auto';
       }
+    //   console.log(isMobileNavOpen)
     });
   
     mobileLinks.forEach(link => {
