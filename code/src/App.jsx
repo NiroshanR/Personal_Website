@@ -1,12 +1,16 @@
 import "./styles/modern-normalize.css";
 import "./styles/App.css";
 import "./styles/components/header.css";
+import './styles/components/mobile-nav.css'
 import "./styles/components/hero.css";
 import "./styles/components/About.css";
 import "./styles/components/projects.css";
 import "./styles/components/contact.css";
 import "./styles/components/footer.css";
 import "./styles/utils.css";
+
+//Js file
+import mobileNav from './utils/mobile-nav';
 
 // images
 import photo from "./assets/propic.jpg";
@@ -17,7 +21,9 @@ import project3_photo from "./assets/Niro's_mart.png";
 import project4_photo from "./assets/Super_app.png";
 
 function App() {
+  mobileNav();
   return (
+    
     <div className="App">
       <header className="header container">
         <nav>
@@ -39,24 +45,6 @@ function App() {
             </li>
             <li className="header__line"></li>
             <li>
-              <button className="header__sun">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                  />
-                </svg>
-              </button>
-            </li>
-            <li>
               <a className="header__resume btn" href="#">
                 Resume
               </a>
@@ -77,6 +65,26 @@ function App() {
           </button>
         </nav>
       </header>
+      {/* Mobile Nav bar Starting */}
+      
+      <div className="mobile-nav">
+        <ul className="mobile-nav__menu">
+          <li>
+            <a className="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+          <a className="mobile-nav__link" href="#projects">Projects</a>
+          </li>
+          <li>
+          <a className="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li className="mobile-nav__link-line"></li>
+          <li>
+          <a className="mobile-nav__btn btn" href="#">Resume</a>
+          </li>
+        </ul>
+      </div>
+      {/* Mobile Nav bar end */}
       <main>
         <section className="hero container">
           <img className="hero__img" src={photo} alt="My profile picture" />
@@ -167,7 +175,7 @@ function App() {
                 <a className=" btn projects-btn" href="">
                   Website
                 </a>
-                <a className=" btn projects-btn" href="">
+                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Personal_Website">
                   Github
                 </a>
               </div>
@@ -191,10 +199,10 @@ function App() {
                 JavaScript programming, and user interface design.
               </p>
               <div className="projects__links">
-                <a className=" btn projects-btn" href="">
+                <a className=" btn projects-btn" href="https://module-test-1.vercel.app/">
                   Website
                 </a>
-                <a className=" btn projects-btn" href="">
+                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Module-Test-1">
                   Github
                 </a>
               </div>
@@ -216,10 +224,10 @@ function App() {
                 Demonstrated proficiency front end development using reactj.js
               </p>
               <div className="projects__links">
-                <a className=" btn projects-btn" href="">
+                <a className=" btn projects-btn" href="https://shop-app-bay-seven.vercel.app/">
                   Website
                 </a>
-                <a className=" btn projects-btn" href="">
+                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Shop-App">
                   Github
                 </a>
               </div>
@@ -244,11 +252,11 @@ function App() {
               </p>
               <div className="projects__links">
                 <a className=" btn projects-btn" href="">
-                  Website
+                  Work in Progress
                 </a>
-                <a className=" btn projects-btn" href="">
+                {/* <a className=" btn projects-btn" href="">
                   Github
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
