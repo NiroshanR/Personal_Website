@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/modern-normalize.css";
 import "./styles/App.css";
 import "./styles/components/header.css";
-import './styles/components/mobile-nav.css'
+import "./styles/components/mobile-nav.css";
 import "./styles/components/hero.css";
 import "./styles/components/About.css";
 import "./styles/components/projects.css";
@@ -11,7 +11,7 @@ import "./styles/components/footer.css";
 import "./styles/utils.css";
 
 //Js file
-import mobileNav from './utils/mobile-nav';
+import mobileNav from "./utils/mobile-nav";
 
 // images
 import photo from "./assets/propic.jpg";
@@ -26,15 +26,10 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    
     // Call the mobileNav function
-    mobileNav(); 
-
-    
-
-}, []);
+    mobileNav();
+  }, []);
   return (
-    
     <div className="App">
       <header className="header container">
         <nav>
@@ -56,7 +51,7 @@ function App() {
             </li>
             <li className="header__line"></li>
             <li>
-              <a className="header__resume btn" href="#">
+              <a className="header__resume btn" href="https://drive.google.com/file/d/1LdjI9rNvNy-QYFCMK3jUoN9VDJlQHEHO/view?usp=sharing">
                 Resume
               </a>
             </li>
@@ -77,21 +72,29 @@ function App() {
         </nav>
       </header>
       {/* Mobile Nav bar Starting */}
-      
+
       <div className="mobile-nav">
         <ul className="mobile-nav__menu">
           <li>
-            <a className="mobile-nav__link" href="#about">About</a>
+            <a className="mobile-nav__link" href="#about">
+              About
+            </a>
           </li>
           <li>
-          <a className="mobile-nav__link" href="#projects">Projects</a>
+            <a className="mobile-nav__link" href="#projects">
+              Projects
+            </a>
           </li>
           <li>
-          <a className="mobile-nav__link" href="#contact">Contact</a>
+            <a className="mobile-nav__link" href="#contact">
+              Contact
+            </a>
           </li>
           <li className="mobile-nav__link-line"></li>
           <li>
-          <a className="mobile-nav__btn btn" href="#">Resume</a>
+            <a className="mobile-nav__btn btn" href="Niroshan's_Resume.pdf">
+              Resume
+            </a>
           </li>
         </ul>
       </div>
@@ -113,7 +116,7 @@ function App() {
           <a
             id="#contact"
             className="hero__btn btn"
-            href="mailto:niroshanr0109@gmail.com"
+            href="mailto:niroshanragu@gmail.com"
             target="_blank"
           >
             Reach out
@@ -125,18 +128,20 @@ function App() {
             <p className="about__description">
               Hello there! I'm Niroshan Ragulesan{" "}
               <strong>Frontend / Fullstack</strong> web developer. Everyday, I
-              spend some quality time on upskill myself with help of internet.
-              all day, everyday.
+              spend some quality time on upskill myself with help of internet. I
+              have a good experience in building web applications which i
+              acquired by self-learning. Recently i have started learning.
+              backend development.
             </p>
             <p className="about__description">
               As a Web developement enthusiast I'm currently searching for a
-              fulltime oppurtunities. If any opening in your organisation
-              satisfies my skills, mail me using the <strong>Reach Out</strong>{" "}
-              Button.
+              fulltime oppurtunities. If any openings in your organisation
+              matches my profile, mail me using the <strong>Reach Out</strong>{" "}
+              button.
             </p>
             <p className="about__description">
               I have created some personal personal projects. Please look out
-              for them while you scroll!!!
+              for them while you scroll !!!
             </p>
             <hr className="about__hr" />
             <h3 className="about__subtitle">Skills</h3>
@@ -186,7 +191,10 @@ function App() {
                 <a className=" btn projects-btn" href="">
                   Website
                 </a>
-                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Personal_Website">
+                <a
+                  className=" btn projects-btn"
+                  href="https://github.com/NiroshanR/Personal_Website"
+                >
                   Github
                 </a>
               </div>
@@ -210,10 +218,16 @@ function App() {
                 JavaScript programming, and user interface design.
               </p>
               <div className="projects__links">
-                <a className=" btn projects-btn" href="https://module-test-1.vercel.app/">
+                <a
+                  className=" btn projects-btn"
+                  href="https://module-test-1.vercel.app/"
+                >
                   Website
                 </a>
-                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Module-Test-1">
+                <a
+                  className=" btn projects-btn"
+                  href="https://github.com/NiroshanR/Module-Test-1"
+                >
                   Github
                 </a>
               </div>
@@ -235,10 +249,16 @@ function App() {
                 Demonstrated proficiency front end development using reactj.js
               </p>
               <div className="projects__links">
-                <a className=" btn projects-btn" href="https://shop-app-bay-seven.vercel.app/">
+                <a
+                  className=" btn projects-btn"
+                  href="https://shop-app-bay-seven.vercel.app/"
+                >
                   Website
                 </a>
-                <a className=" btn projects-btn" href="https://github.com/NiroshanR/Shop-App">
+                <a
+                  className=" btn projects-btn"
+                  href="https://github.com/NiroshanR/Shop-App"
+                >
                   Github
                 </a>
               </div>
@@ -281,7 +301,7 @@ function App() {
           </p>
           <a
             className="contact__btn btn"
-            href="mailto:niroshanr0109@gmail.com"
+            href="mailto:niroshanragu@gmail.com"
             target="_blank"
           >
             React Out
@@ -293,7 +313,6 @@ function App() {
       </footer>
     </div>
   );
-
 }
 
 export default App;
