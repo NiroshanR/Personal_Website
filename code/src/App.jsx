@@ -92,7 +92,7 @@ function App() {
           </li>
           <li className="mobile-nav__link-line"></li>
           <li>
-            <a className="mobile-nav__btn btn" href="Niroshan's_Resume.pdf">
+            <a className="mobile-nav__btn btn" href="https://drive.google.com/file/d/1LdjI9rNvNy-QYFCMK3jUoN9VDJlQHEHO/view?usp=sharing">
               Resume
             </a>
           </li>
